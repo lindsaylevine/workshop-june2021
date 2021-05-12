@@ -8,7 +8,8 @@
     "start": "next start",
     "slicemachine": "start-slicemachine --port 9999",
     "storybook": "start-storybook -p 8888",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "export": "next export"
   },
   "dependencies": {
     "essential-slices": "^1.0.4",
