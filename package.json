@@ -14,6 +14,7 @@
   "dependencies": {
     "essential-slices": "^1.0.4",
     "next": "10.2.0",
+    "next-compose-plugins": "^2.2.1",
     "next-slicezone": "0.0.15",
     "next-transpile-modules": "^7.0.0",
     "prismic-javascript": "^3.0.2",
