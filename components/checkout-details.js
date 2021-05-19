@@ -16,13 +16,16 @@ function CheckoutDetails() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await fetch('/.netlify/functions/create-session', {
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(cartDetails),
-    })
+    const response = await fetch(
+      '/.netlify/functions/next_api_create_session',
+      {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(cartDetails),
+      }
+    )
       .then((res) => {
         return res.json();
       })

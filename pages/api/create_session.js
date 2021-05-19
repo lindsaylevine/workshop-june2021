@@ -5,17 +5,17 @@ const stripe = require('stripe')(process.env.STRIPE_API_SECRET);
 
 // const inventory = require('../data/products.json');
 
-exports.handler = async (event) => {
-  const products = await queryRepeatableDocuments(
+export default (req, res) => {
+
+   const products = await queryRepeatableDocuments(
     (docs) => docs.type === 'products'
   );
+  
 
   console.log(products);
+  res.status(200).json({ name: 'John Doe' });
+};
 
-  return {
-    statusCode: 200,
-    body: 'lol',
-  };
 
   // try {
   //   const productJSON = JSON.parse(event.body);
