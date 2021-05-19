@@ -5,7 +5,7 @@ const stripe = require('stripe')(process.env.STRIPE_API_SECRET);
 
 // const inventory = require('../data/products.json');
 
-export default (req, res) => {
+export default async (req, res) => {
 
    const products = await queryRepeatableDocuments(
     (docs) => docs.type === 'products'
