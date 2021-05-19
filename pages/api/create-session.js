@@ -1,15 +1,20 @@
 const stripe = require('stripe')(process.env.STRIPE_API_SECRET);
 
-const validateCartItems =
-  require('use-shopping-cart/utilities/serverless').validateCartItems;
+const getCheckoutData =
+  require('use-shopping-cart/utilities/old-utils').getCheckoutData;
 
-const inventory = require('../data/products.json');
+// const validateCartItems =
+//   require('use-shopping-cart/utilities/serverless').validateCartItems;
+
+// const inventory = require('../data/products.json');
 
 exports.handler = async (event) => {
   try {
     const productJSON = JSON.parse(event.body);
 
-    const line_items = validateCartItems(inventory, productJSON);
+    // const line_items = validateCartItems(inventory, productJSON);
+
+    const line_items = getCheckoutData(productJSON);
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
