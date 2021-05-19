@@ -33,13 +33,14 @@ export default {
     fontFamily: 'heading',
     fontWeight: 'heading',
     textTransform: 'uppercase',
-    color: 'primary',
+    color: 'text',
     py: 2,
     my: 2,
   },
   text: {
     default: {
       color: 'text',
+      fontSize: 18,
       mb: 5,
     },
     caps: {

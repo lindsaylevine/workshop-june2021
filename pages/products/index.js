@@ -5,6 +5,7 @@ import { RichText } from 'prismic-reactjs';
 import ProductCatalog from '../../components/product-catalog';
 
 import { queryRepeatableDocuments } from '../../queries';
+import { Heading } from '@theme-ui/components';
 
 export async function getStaticProps() {
   const products = await queryRepeatableDocuments(
@@ -20,6 +21,9 @@ export async function getStaticProps() {
 function Products({ products }) {
   return (
     <Layout>
+      <Heading as='h1' sx={{ textAlign: 'center' }}>
+        Products
+      </Heading>
       <ProductCatalog products={products} />
     </Layout>
   );

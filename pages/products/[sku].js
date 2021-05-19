@@ -41,7 +41,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      product: { ...selectedProduct.product, ...selectedProduct },
+      product: { ...selectedProduct.product, ...selectedProduct, price: 10000 },
     },
   };
 }

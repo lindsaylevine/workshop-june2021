@@ -20,6 +20,7 @@ export default class App extends NextApp {
           billingAddressCollection={false}
           successUrl='https://stripe.com'
           cancelUrl='https://twitter.com/dayhaysoos'
+          allowedCountries={['US']}
           currency='USD'>
           <BaseStyles>
             <Component {...pageProps} />
