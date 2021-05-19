@@ -10,7 +10,6 @@ export default async (req, res) => {
    const products = await queryRepeatableDocuments(
     (docs) => docs.type === 'products'
   );
-  
 
   console.log(products);
   res.status(200).json({ name: 'John Doe' });
@@ -43,4 +42,4 @@ export default async (req, res) => {
   // } catch (error) {
   //   console.error(error);
   // }
-};
+// };
